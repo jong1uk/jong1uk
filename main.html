@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css" />
+    <link rel="stylesheet" href="main.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
+    <script></script>
+</head>
+
+<body>
+    <header>
+        <h1 class="logo">POPCORN<br>BUDDY</h1>
+    </header>
+
+    <!-- 메인 영화포스터 슬라이드 -->
+    <!-- 클래스명은 변경하면 안 됨 -->
+    <div class="swiper-container main-swiper">
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide open_btn">
+                <img id="image1" src="http://file.koreafilm.or.kr/thm/02/99/18/33/tn_DPK021733.jpg" alt="파묘"
+                    onerror="errorImage(this)" class="open_btn" />
+            </div>
+
+
+        </div>
+
+        <!-- 네비게이션 -->
+        <!-- <div class="swiper-button-next"></div> -->
+        <!-- 다음 버튼 (오른쪽에 있는 버튼) -->
+        <!-- <div class="swiper-button-prev"></div> -->
+        <!-- 이전 버튼 -->
+
+        <!-- 페이징 -->
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <!-- 모달창 -->
+    <div class="modal">
+        <div class="modal_content">
+            <button class="close_btn">X</button>
+            <div class="modal_top">
+                <!--해당 영화 포스터 이미지-->
+                <div class="img-container">
+
+                    <img class="selectedPoster" src="" />
+
+                </div>
+                <p>영화 세부 정보</p>
+
+
+
+            </div>
+            <hr>
+            <div class="modal_bottom">
+
+                <!-- 방생성 슬라이드 -->
+                <div class="swiper-container">
+                    <div class="swiper-wrapper swiper-wrapper2">
+                        <!-- <div class="swiper-slide">
+                        
+                        </div> -->
+                    </div>
+
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
+
+                <div class="hidden-room">
+                    <section class="date">
+                        <label for="date">날짜:</label>
+                        <input type="date" id="date" class="input-date">
+                    </section>
+                    <section class="area">
+                        <label for="area">지역:</label>
+                        <select id="area" class="input-area">
+                            <option value="seoul">서울</option>
+                            <option value="busan">부산</option>
+                            <option value="busan">광주</option>
+                            <!-- 다른 지역 옵션 추가 -->
+                        </select>
+                    </section>
+                    <button type="submit" class="save-btn">save</button>
+                </div>
+
+
+                <section class="create-room">
+                    <button class="add_btn" onclick="">+</button>
+                </section>
+
+
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+    <script src="main.js"></script>
+
+</body>
+
+</html>
